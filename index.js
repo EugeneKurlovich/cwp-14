@@ -1,7 +1,15 @@
 const Sequelize = require('sequelize');
 const config = require('./config.json');
 const db = require('./models')(Sequelize, config);
+let films = require('./data/films.json');
+const actors = require('./data/actors.json');
 
+db.sequelize.addHook('beforeBulkCreate', () => {
+    console.log('beforeCreate');
+});
+db.sequelize.addHook('afterBulkCreate', () => {
+    console.log('afterCreate');
+});
 
 
 WorkWork();
