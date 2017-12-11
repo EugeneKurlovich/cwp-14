@@ -21,7 +21,7 @@ module.exports = (Sequelize, sequelize) => {
             allowNull: false,
             validate: {
                 isInt: true,
-                min: 1970
+                min: 2000
             }
         },
         budget: {
