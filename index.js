@@ -81,7 +81,12 @@ await db.sequelize.transaction().then(function (t) {
     });
 });
 
-
-
+   // 9. Демонстрация upgrade/downgrade методов миграции с добавление/удалением поля genres
+    // sequelize init
+    // sequelize model:generate --name film --attributes title:string,rating:float,budget:integer,gross:integer,poster:string
+    // sequelize model:generate --name actor --attributes name:string,birth:string,films:integer,liked:integer,photo:string
+    // sequelize db:migrate
+    // sequelize db:migrate:undo
+    //
 
 }
